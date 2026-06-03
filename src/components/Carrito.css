@@ -1,0 +1,221 @@
+/* Contenedor Exterior de la Página */
+.carrito-pagina-container {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f4f5f7;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #334155;
+  box-sizing: border-box;
+}
+
+/* Tarjeta Contenedora Más Grande y Pulida */
+.carrito-tarjeta-principal {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.carrito-titulo-grande {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.carrito-subtitulo-tienda {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Tabla Estilo Kakobuy (4 Columnas) */
+.carrito-tabla-cabecera {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1.2fr;
+  gap: 16px;
+  background-color: #f8fafc;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #475569;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Filas Dinámicas de Productos */
+.carrito-listado-cuerpo {
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.carrito-fila-item {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr 1.2fr;
+  gap: 16px;
+  padding: 20px 16px;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s;
+}
+
+.carrito-fila-item:hover {
+  background-color: #f8fafc;
+}
+
+/* Estilos de las imágenes de productos */
+.carrito-col-foto {
+  display: flex;
+  justify-content: center;
+}
+
+.carrito-col-foto img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+/* Detalles del Texto */
+.carrito-col-detalle {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.carrito-item-nombre-txt {
+  font-weight: 600;
+  color: #1e293b;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.carrito-item-precio-unitario {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Badge Multiplicador Estilo x1, x2, x3 */
+.carrito-col-cantidad {
+  display: flex;
+  justify-content: center;
+}
+
+.carrito-badge-multiplicador {
+  background-color: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Subtotales por fila */
+.carrito-col-subtotal {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+/* Sección Inferior: Bloque de Totales y Caja */
+.carrito-resumen-gastos {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.carrito-fila-total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.carrito-monto-total {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+/* Botonera de Control Inferior */
+.carrito-contenedor-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-seguir-comprando {
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-seguir-comprando:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+
+.btn-proceder-pago {
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(255, 87, 34, 0.2);
+  transition: background-color 0.2s;
+}
+
+.btn-proceder-pago:hover {
+  background-color: #e64a19;
+}
+
+/* Estado de Carrito Vacío */
+.carrito-seccion-vacia {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+}
+
+.carrito-icono-vacio {
+  font-size: 48px;
+  margin: 0 0 16px 0;
+}
+
+.carrito-seccion-vacia h3 {
+  color: #475569;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.carrito-seccion-vacia p {
+  font-size: 14px;
+  margin: 0;
+}

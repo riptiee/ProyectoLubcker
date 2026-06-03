@@ -1,0 +1,15 @@
+.contenedor-productos {
+  padding: 20px;
+}
+
+.titulo-productos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
