@@ -1,0 +1,15 @@
+.producto {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #111;
+}
+
+.producto button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
