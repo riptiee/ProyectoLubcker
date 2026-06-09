@@ -1,0 +1,8 @@
+.productos-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* Fuerza exactamente las 4 columnas en horizontal */
+  gap: 20px !important; /* Espacio uniforme entre cada una */
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
