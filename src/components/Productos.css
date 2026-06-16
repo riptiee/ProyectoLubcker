@@ -1,0 +1,107 @@
+/* --- ESTILOS GENERALES DEL CATÁLOGO --- */
+.catalogo-contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Grilla de productos (Mantenemos 4 o 5 por fila según prefieras) */
+.productos-grid {
+  display: grid;
+  /* Cambié repeat(5, 1fr) a auto-fill para que se acomoden mejor si las fotos son chicas */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 25px; /* Espacio entre tarjetas */
+  padding: 20px 0 50px 0;
+}
+
+/* --- DISEÑO DE LA TARJETA (CARD) --- */
+.producto-card {
+  background-color: #ffffff;
+  border-radius: 15px; /* Bordes más redondeados y modernos */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Sombra suave y elegante */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* --- ESTA ES LA PARTE IMPORTANTE PARA LAS FOTOS --- */
+
+/* 1. Contenedor de la imagen: Forzamos el cuadrado */
+.producto-imagen-contenedor {
+  width: 100%;
+  /* MAGIA AQUÍ: aspect-ratio fuerza a que el alto sea igual al ancho, SIEMPRE cuadrado */
+  aspect-ratio: 1 / 1; 
+  background-color: #f8fafc; /* Fondo gris muy suave por si la foto no carga */
+  overflow: hidden; /* Corta lo que sobre si la foto no es cuadrada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. La imagen real: Hacemos que se adapte al cuadrado sin deformarse */
+.producto-imagen {
+  width: 100%;
+  height: 100%;
+  /* MAGIA AQUÍ: object-fit: cover hace que la foto se "HAGA ZOOM" y se RECORTE 
+     para llenar el cuadrado sin estirarse ni aplastarse. 
+     Es como el "Corte Cuadrado" de Instagram. */
+  object-fit: cover; 
+}
+
+/* --- INFO DEL PRODUCTO (TEXTOS Y BOTÓN) --- */
+.producto-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Empuja el footer hacia abajo */
+  text-align: center; /* Centramos los textos */
+}
+
+.producto-titulo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+  min-height: 42px; /* Espacio para 2 líneas de título */
+}
+
+.producto-footer {
+  margin-top: auto; /* Empuja el precio y botón al fondo de la card */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* El verde clarito y llamativo para el precio */
+.producto-precio {
+  font-size: 22px;
+  font-weight: 800;
+  color: #22c55e; /* Un verde más vivo y claro */
+}
+
+/* Botón de agregar minimalista y moderno */
+.btn-agregar-carrito {
+  background-color: #0f172a; /* Negro azulado elegante */
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.btn-agregar-carrito:hover {
+  background-color: #334155;
+}
