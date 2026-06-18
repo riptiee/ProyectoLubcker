@@ -1,0 +1,46 @@
+/* Tabla Estilo Kakobuy (AHORA DE 5 COLUMNAS) */
+.carrito-tabla-cabecera {
+  display: grid;
+  /* Agregamos "0.8fr" al final para la columna del tacho de basura */
+  grid-template-columns: 1fr 2.5fr 1fr 1.2fr 0.8fr; 
+  gap: 16px;
+  background-color: #f8fafc;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #475569;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.carrito-fila-item {
+  display: grid;
+  /* Tiene que ser idéntico al de arriba para que se alineen perfectamente */
+  grid-template-columns: 1fr 2.5fr 1fr 1.2fr 0.8fr; 
+  gap: 16px;
+  padding: 20px 16px;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s;
+}
+
+/* --- AGREGA ESTO AL FINAL DE TU ARCHIVO CSS --- */
+.carrito-col-eliminar {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: #ef4444; /* Un rojo que combina con tu paleta */
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-eliminar:hover {
+  transform: scale(1.1); /* Efecto de que el tacho crece al pasar el mouse */
+}

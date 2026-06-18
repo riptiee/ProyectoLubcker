@@ -1,0 +1,215 @@
+/* Barra principal fija arriba */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-bottom: 2px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+/* Alineación de los lados */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Tres líneas del menú hamburguesa */
+.hamburger {
+  cursor: pointer;
+}
+.line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+}
+
+/* Logo */
+.logo-lubcker {
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+}
+
+/* Buscador del centro */
+.navbar-center {
+  flex: 1;
+  max-width: 400px;
+}
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* Contenedor e iconos */
+.icon-box {
+  position: relative;
+  display: inline-block;
+}
+.nav-icon-carrito {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.nav-icon-login {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Número chiquito arriba del carrito */
+.numero-carrito {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: black;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Ventana flotante con animación Fade-In */
+.ventanita-flotante {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  width: 220px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  
+  /* Estado inicial oculto */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Activa animación de la ventanita */
+.ventanita-flotante.abierto {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Títulos y textos */
+.ventanita-flotante h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #1a202c;
+  font-family: sans-serif;
+}
+.ventanita-flotante p.carrito-vacio {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #718096;
+}
+
+/* Botones de ventanitas */
+.ventanita-flotante button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ventanita-flotante button.btn-primario {
+  background: #1a202c;
+  color: #ffffff;
+  border: none;
+  margin-bottom: 8px;
+}
+.ventanita-flotante button.btn-primario:hover {
+  background: #2d3748;
+}
+.ventanita-flotante button.btn-secundario {
+  background: transparent;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+.ventanita-flotante button.btn-secundario:hover {
+  background: #f7fafc;
+  color: #1a202c;
+  border-color: #a0aec0;
+}
+
+/* Menú lateral con animación de desplazamiento */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  padding: 24px;
+  z-index: 200;
+  box-sizing: border-box;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  
+  /* Estado inicial oculto a la izquierda */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Activa animación del menú lateral */
+.menu-lateral.abierto {
+  transform: translateX(0);
+}
+
+/* Botón cerrar del menú lateral */
+.btn-cerrar {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #718096;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.btn-cerrar:hover {
+  color: #1a202c;
+}
+
+/* Lista y opciones del menú lateral */
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 48px;
+}
+.menu-lateral li {
+  padding: 14px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d3748;
+  border-bottom: 1px solid #edf2f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.menu-lateral li:hover {
+  background: #f7fafc;
+  color: #1a202c;
+  padding-left: 14px;
+}
