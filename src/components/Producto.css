@@ -1,0 +1,60 @@
+/* Tarjeta en estado normal */
+.producto-tarjeta {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333333;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  min-height: 200px;
+  cursor: pointer;
+  
+  /* Transición suave para que la animación no sea brusca */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO: Cuando el mouse está encima (se agranda y genera sombra oscura) */
+.producto-tarjeta.hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Título del producto */
+.producto-tarjeta h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+  color: #222222;
+}
+
+/* El precio en color VERDE */
+.producto-precio {
+  color: #28a745 !important; 
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* El botón de agregar al carrito en color NEGRO */
+.producto-boton {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  margin-top: auto;
+  transition: background-color 0.2s ease;
+}
+
+/* El botón cambia a un gris oscuro al posicionar el mouse sobre él */
+.producto-boton:hover {
+  background: #252525 !important;
+}
