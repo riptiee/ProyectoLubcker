@@ -1,0 +1,128 @@
+.pagina-producto-contenedor {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.btn-volver-catalogo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.btn-volver-catalogo:hover {
+  text-decoration: underline;
+}
+
+.producto-detalle-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px; /* Espacio antes de los relacionados */
+}
+
+.producto-wrapper-imagen {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto-imagen-principal {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.producto-bloque-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.producto-categoria-etiqueta {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.producto-nombre-titulo {
+  font-size: 32px;
+  margin: 10px 0 20px 0;
+  color: #222;
+}
+
+.producto-precio-destacado {
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0 0 20px 0;
+}
+
+.producto-texto-descripcion {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-comprar-carrito {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-comprar-carrito:hover {
+  background-color: #555;
+}
+
+.error-producto-no-existe {
+  padding: 8px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-error-regresar {
+  margin-top: 20px;
+}
+
+/* --- ESTILOS DE PRODUCTOS RELACIONADOS --- */
+.seccion-relacionados {
+  border-top: 1px solid #eaeaea;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.titulo-relacionados {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.productos-relacionados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
